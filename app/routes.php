@@ -71,6 +71,8 @@ Route::get('/test9', function()
 	return View::make('test9');
 });
 
+Route::get('/quoteDB', 'HomeController@home');
+
 //incomplete. lots of extra files. would be faster to scrape than to copy paste
 //Route::get('/test10', function()
 //{
