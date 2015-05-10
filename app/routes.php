@@ -73,6 +73,8 @@ Route::get('/test9', function()
 
 Route::get('/quoteDB', 'HomeController@home');
 
+Route::post('/quoteDB/search', 'HomeController@search');
+
 //incomplete. lots of extra files. would be faster to scrape than to copy paste
 //Route::get('/test10', function()
 //{

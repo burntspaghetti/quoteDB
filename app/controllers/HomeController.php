@@ -20,4 +20,9 @@ class HomeController extends BaseController {
 		return View::make('quoteHome');
 	}
 
+	public function search()
+	{
+		dd(Input::all());
+	}
+
 }

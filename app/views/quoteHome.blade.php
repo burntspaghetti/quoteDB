@@ -39,12 +39,17 @@
         </div>
         <div class="navbar-collapse collapse" id="navbar-main">
             <ul class="nav navbar-nav">
-                <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
+
+                {{ Form::open([ 'action' => 'HomeController@search', 'class' => 'navbar-form navbar-left']) }}
+
+
+                <!--search Form Input-->
+                <div class="form-group">
+                    {{ Form::input('text', 'search', null, array('class' => 'form-control')) }}
+                </div>
+                
+                {{ Form::close() }}
+
 
                 <li>
                     <a href="">Personas</a>
@@ -59,14 +64,21 @@
 
     <div class="page-header" id="banner">
         <div class="row">
+            
+            {{ Form::open([ 'action' => 'HomeController@search', 'class' => 'clearfix', 'style' => 'padding:1em 3em;']) }}
+
+            <!--search Form Input-->
             <div class="form-group">
-                <label class="control-label" for="inputLarge">Search quotes:</label>
-                <input class="form-control input-lg" type="text" id="inputLarge">
+                {{ Form::label('search', 'Search Quotes: ') }}
+                {{ Form::input('text', 'search', null, array('class' => 'form-control input-lg')) }}
             </div>
+
+            <button class="btn btn-default btn-lg btn-block" type="submit">Search</button>
+
+            {{ Form::close() }}
+
         </div>
     </div>
-
-
 
 
 
