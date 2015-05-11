@@ -36,7 +36,9 @@ class HomeController extends BaseController {
 //		}
 
 		return View::make('quoteSearch')->with('quotes', $quotes)
-			                            ->with('personaArray', $personaArray);
+			                            ->with('personaArray', $personaArray)
+										->with('query', $query);
+
 	}
 
 }
