@@ -1,241 +1,107 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
+<html lang="en"><head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Bootswatch: Cyborg</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="">
-	<meta name="author" content="">
-
-	<title>Spaceship Earth</title>
-
-	<!-- Bootstrap Core CSS -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-
-	<!-- Custom CSS -->
-	<link href="css/landing-page.css" rel="stylesheet">
-
-	<!-- Custom Fonts -->
-	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
-	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="cyborg/bootstrap.css" media="screen">
+	<link rel="stylesheet" href="cyborg/bootswatch.min.css">
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
-	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+	<script src="../bower_components/respond/dest/respond.min.js"></script>
 	<![endif]-->
+	<script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script>
 
-</head>
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-23019901-1']);
+		_gaq.push(['_setDomainName', "bootswatch.com"]);
+		_gaq.push(['_setAllowLinker', true]);
+		_gaq.push(['_trackPageview']);
 
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
+	</script><style type="text/css"></style>
+	<style>@-webkit-keyframes popdxstckdeugtjivcsrcuczmoyldiozakxsurzerk {50% {-webkit-transform:scale(1.2);}100% {-webkit-transform:scale(1);}}@keyframes popdxstckdeugtjivcsrcuczmoyldiozakxsurzerk {50% {-webkit-transform:scale(1.2);transform:scale(1.2);}100% {-webkit-transform:scale(1);transform:scale(1);}}#dxstckdeugtjivcsrcuczmoyldiozakxsurzerk{padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;border:solid 2px #fff !important;box-sizing:content-box !important;color:#fff !important;display:block !important;height:auto !important;margin:0 !important;opacity:0.9 !important;padding:7px 10px !important;position:fixed !important;visibility:visible !important;width:auto !important;z-index:2147483647 !important;-webkit-border-radius:5px !important;-webkit-box-shadow:0px 0px 20px #000 !important;-webkit-box-sizing:content-box !important;}.dxstckdeugtjivcsrcuczmoyldiozakxsurzerk-blocked{padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;color:#AAA !important;display:inline !important;text-decoration:line-through !important;}#dxstckdeugtjivcsrcuczmoyldiozakxsurzerk br{display:block !important;padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;}#dxstckdeugtjivcsrcuczmoyldiozakxsurzerk span{background:transparent !important;padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;}#dxstckdeugtjivcsrcuczmoyldiozakxsurzerk div{padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;border:0 !important;margin:0 !important;padding:0 !important;width:auto !important;letter-spacing:normal !important;font:13px Arial,Helvetica !important;text-align:left !important;text-shadow:none !important;text-transform:none !important;word-spacing:normal !important;}#dxstckdeugtjivcsrcuczmoyldiozakxsurzerk a{padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;font-weight:normal !important;background:none !important;text-decoration:underline !important;color:#fff !important;}a#dxstckdeugtjivcsrcuczmoyldiozakxsurzerk-gear{padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;text-decoration:none !important;position:absolute !important;display:none !important;font-size:20px !important;width:20px !important;height:20px !important;line-height:20px !important;text-align:center !important;background-color:rgba(255,255,255,.8) !important;background-image:url(chrome-extension://mlomiejdfkolichcflejclcbmpeaniij/data/images/gear.svg) !important;background-size:16px 16px !important;background-position:center center !important;background-repeat:no-repeat !important;text-decoration:none !important;}a#dxstckdeugtjivcsrcuczmoyldiozakxsurzerk-gear:hover{-webkit-animation-name:popdxstckdeugtjivcsrcuczmoyldiozakxsurzerk !important;animation-name:popdxstckdeugtjivcsrcuczmoyldiozakxsurzerk !important;-webkit-animation-duration:0.3s !important;animation-duration:0.3s !important;}#dxstckdeugtjivcsrcuczmoyldiozakxsurzerk:hover #dxstckdeugtjivcsrcuczmoyldiozakxsurzerk-gear{text-decoration:none !important;display:inline-block !important;}@media print{#dxstckdeugtjivcsrcuczmoyldiozakxsurzerk{display:none !important;}}</style></head>
 <body>
-
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-	<div class="container topnav">
-		<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
 		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-				<span class="sr-only">Toggle navigation</span>
+			<a href="../" class="navbar-brand">quoteDB</a>
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand topnav" href="#">Start Bootstrap</a>
 		</div>
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav navbar-right">
+		<div class="navbar-collapse collapse" id="navbar-main">
+			<ul class="nav navbar-nav">
+
+				{{ Form::open([ 'action' => 'HomeController@search', 'class' => 'navbar-form navbar-left']) }}
+
+
+				<!--search Form Input-->
+				<div class="form-group">
+					{{ Form::input('text', 'search', null, array('class' => 'form-control')) }}
+				</div>
+
+				{{ Form::close() }}
+
+
 				<li>
-					<a href="#about">About</a>
-				</li>
-				<li>
-					<a href="#services">Services</a>
-				</li>
-				<li>
-					<a href="#contact">Contact</a>
+					<a href="">Personas</a>
 				</li>
 			</ul>
 		</div>
-		<!-- /.navbar-collapse -->
 	</div>
-	<!-- /.container -->
-</nav>
+</div>
 
 
-<!-- Header -->
-<a name="about"></a>
-<div class="intro-header">
-	<div class="container">
+<div class="container">
 
+	<div class="page-header" id="banner">
 		<div class="row">
-			<div class="col-lg-12">
-				<div class="intro-message">
-					<h1>Hello Nicolette</h1>
-					<h3>Fetus</h3>
-					<hr class="intro-divider">
-					<ul class="list-inline intro-social-buttons">
-						<li>
-							<a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-						</li>
-						<li>
-							<a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-						</li>
-						<li>
-							<a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
 
+			{{ Form::open([ 'action' => 'HomeController@search', 'class' => 'clearfix', 'style' => 'padding:1em 3em;']) }}
+
+			<!--search Form Input-->
+			<div class="form-group">
+				{{ Form::label('search', 'Search Quotes: ') }}
+				{{ Form::input('text', 'search', null, array('class' => 'form-control input-lg')) }}
+			</div>
+
+			<button class="btn btn-default btn-lg btn-block" type="submit">Search</button>
+
+			{{ Form::close() }}
+
+		</div>
 	</div>
-	<!-- /.container -->
+</div>
+
+<div class="container">
+	<div class="row">
+		@yield('content')
+	</div>
 
 </div>
-<!-- /.intro-header -->
 
-<!-- Page Content -->
 
-<a  name="services"></a>
-<div class="content-section-a">
 
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-5 col-sm-6">
-				<hr class="section-heading-spacer">
-				<div class="clearfix"></div>
-				<h2 class="section-heading">Death to the Stock Photo:<br>Special Thanks</h2>
-				<p class="lead">A special thanks to <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a> for providing the photographs that you see in this template. Visit their website to become a member.</p>
-			</div>
-			<div class="col-lg-5 col-lg-offset-2 col-sm-6">
-				<img class="img-responsive" src="img/ipad.png" alt="">
-			</div>
-		</div>
 
-	</div>
-	<!-- /.container -->
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="cyborg/bootstrap.min.js"></script>
+<script src="cyborg/bootswatch.js"></script>
+<script type="text/javascript">
+	/* <![CDATA[ */
+	(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+	/* ]]> */
+</script>
 
-</div>
-<!-- /.content-section-a -->
 
-<div class="content-section-b">
-
-	<div class="container">
-
-		<div class="row">
-			<div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-				<hr class="section-heading-spacer">
-				<div class="clearfix"></div>
-				<h2 class="section-heading">3D Device Mockups<br>by PSDCovers</h2>
-				<p class="lead">Turn your 2D designs into high quality, 3D product shots in seconds using free Photoshop actions by <a target="_blank" href="http://www.psdcovers.com/">PSDCovers</a>! Visit their website to download some of their awesome, free photoshop actions!</p>
-			</div>
-			<div class="col-lg-5 col-sm-pull-6  col-sm-6">
-				<img class="img-responsive" src="img/dog.png" alt="">
-			</div>
-		</div>
-
-	</div>
-	<!-- /.container -->
-
-</div>
-<!-- /.content-section-b -->
-
-<div class="content-section-a">
-
-	<div class="container">
-
-		<div class="row">
-			<div class="col-lg-5 col-sm-6">
-				<hr class="section-heading-spacer">
-				<div class="clearfix"></div>
-				<h2 class="section-heading">Google Web Fonts and<br>Font Awesome Icons</h2>
-				<p class="lead">This template features the 'Lato' font, part of the <a target="_blank" href="http://www.google.com/fonts">Google Web Font library</a>, as well as <a target="_blank" href="http://fontawesome.io">icons from Font Awesome</a>.</p>
-			</div>
-			<div class="col-lg-5 col-lg-offset-2 col-sm-6">
-				<img class="img-responsive" src="img/phones.png" alt="">
-			</div>
-		</div>
-
-	</div>
-	<!-- /.container -->
-
-</div>
-<!-- /.content-section-a -->
-
-<a  name="contact"></a>
-<div class="banner">
-
-	<div class="container">
-
-		<div class="row">
-			<div class="col-lg-6">
-				<h2>Connect to Start Bootstrap:</h2>
-			</div>
-			<div class="col-lg-6">
-				<ul class="list-inline banner-social-buttons">
-					<li>
-						<a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-					</li>
-					<li>
-						<a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-					</li>
-					<li>
-						<a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-					</li>
-				</ul>
-			</div>
-		</div>
-
-	</div>
-	<!-- /.container -->
-
-</div>
-<!-- /.banner -->
-
-<!-- Footer -->
-<footer>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<ul class="list-inline">
-					<li>
-						<a href="#">Home</a>
-					</li>
-					<li class="footer-menu-divider">&sdot;</li>
-					<li>
-						<a href="#about">Automation</a>
-					</li>
-					<li class="footer-menu-divider">&sdot;</li>
-					<li>
-						<a href="#services">Services</a>
-					</li>
-					<li class="footer-menu-divider">&sdot;</li>
-					<li>
-						<a href="#contact">Contact</a>
-					</li>
-					<li class="footer-menu-divider">&sdot;</li>
-					<li>
-						<a href="#contact">Contact</a>
-					</li>
-				</ul>
-				<p class="copyright text-muted small">Copyright &copy; Your Company 2014. All Rights Reserved</p>
-			</div>
-		</div>
-	</div>
-</footer>
-
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-
-</body>
-
-</html>
+<div id="dxstckdeugtjivcsrcuczmoyldiozakxsurzerk" title="Click to dismiss alert bubble" style="right: 20px !important; bottom: 15px !important; cursor: pointer; background: rgb(51, 0, 51) !important;"><div style="background: rgb(51, 0, 51) !important;"><a href="#" id="dxstckdeugtjivcsrcuczmoyldiozakxsurzerk-gear" title="Click to configure alert bubble" style="right: 0px !important; bottom: 0px !important; border-top-left-radius: 3px !important; border-bottom-right-radius: 3px !important;">&nbsp;</a><span>Google Analytics</span><br></div></div><script id="hiddenlpsubmitdiv" style="display: none;"></script><script>try{for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; if (typeof(lastpass_f.lpsubmitorig2)=='object'){ console.error('LastPass: Skipping form because submit is not a function!');continue;}lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); if (d) {for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ if (typeof(d.innerText) != 'undefined') { d.innerText=i; } else { d.textContent=i; } } } d.dispatchEvent(customEvent); }form.lpsubmitorig2(); } } }}catch(e){}</script></body></html>
 
 {{--@yield('content')--}}
 

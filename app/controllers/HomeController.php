@@ -1,20 +1,7 @@
 <?php
 
 class HomeController extends BaseController {
-
-	/*
-	|--------------------------------------------------------------------------
-	| Default Home Controller
-	|--------------------------------------------------------------------------
-	|
-	| You may wish to use controllers instead of, or in addition to, Closure
-	| based routes. That's great! Here is an example controller method to
-	| get you started. To route to this controller, just add the route:
-	|
-	|	Route::get('/', 'HomeController@showWelcome');
-	|
-	*/
-
+	
 	public function home()
 	{
 		return View::make('quoteHome');
@@ -22,7 +9,34 @@ class HomeController extends BaseController {
 
 	public function search()
 	{
-		dd(Input::all());
+		$query = Input::get('search');
+		$quotes = DB::select( DB::raw("select * from quote where quoteText like '%$query%';"));
+		
+
+		$personaArray = array();
+//		$quoteTagIndex = array();
+		foreach($quotes as $quote)
+		{
+			$persona = Persona::find($quote->idPersona);
+			$personaArray[$quote->idPersona] = $persona;
+
+//			$tags = Quote::find($quote->idQuote)->tags;
+//			if($tags)
+//			{
+//				$quoteTagIndex[$quote->idQuote] = $tags;
+//			}
+		}
+
+
+//		$personaPhoto = array();
+//		foreach($personaArray as $persona)
+//		{
+//			$photo = DB::select( DB::raw("select * from photo where personaid = $persona->idPersona limit 1"));
+//			$personaPhoto[$persona->idPersona] = $photo;
+//		}
+		
+		return View::make('quoteSearch')->with('quotes', $quotes)
+			                            ->with('personaArray', $personaArray);
 	}
 
 }
