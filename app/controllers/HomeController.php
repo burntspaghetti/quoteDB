@@ -34,7 +34,7 @@ class HomeController extends BaseController {
 //			$photo = DB::select( DB::raw("select * from photo where personaid = $persona->idPersona limit 1"));
 //			$personaPhoto[$persona->idPersona] = $photo;
 //		}
-		
+
 		return View::make('quoteSearch')->with('quotes', $quotes)
 			                            ->with('personaArray', $personaArray);
 	}

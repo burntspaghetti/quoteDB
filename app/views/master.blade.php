@@ -3,12 +3,29 @@
 	<title>Bootswatch: Cyborg</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="stylesheet" href="cyborg/bootstrap.css" media="screen">
-	<link rel="stylesheet" href="cyborg/bootswatch.min.css">
+
+	<link href='//cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.css' rel='stylesheet' type='text/css'>
+
+
+	<!-- jQuery -->
+	<script type="text/javascript" charset="utf8" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+	<!-- DataTables -->
+	<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.js"></script>
+	<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+
+
+	<?php echo HTML::style('cyborg/bootstrap.css') ?>
+	<?php echo HTML::style('cyborg/bootswatch.min.css') ?>
+	{{--<link rel="stylesheet" href="cyborg/bootstrap.css" media="screen">--}}
+	{{--<link rel="stylesheet" href="cyborg/bootswatch.min.css">--}}
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 	<script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
 	<script src="../bower_components/respond/dest/respond.min.js"></script>
+
+
+
 	<![endif]-->
 	<script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script>
 
@@ -30,7 +47,7 @@
 <div class="navbar navbar-default navbar-fixed-top">
 	<div class="container">
 		<div class="navbar-header">
-			<a href="../" class="navbar-brand">quoteDB</a>
+			<a href="/public/quoteDB" class="navbar-brand">quoteDB</a>
 			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
@@ -84,6 +101,7 @@
 <div class="container">
 	<div class="row">
 		@yield('content')
+		@yield('test')
 	</div>
 
 </div>
@@ -91,9 +109,12 @@
 
 
 
-<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="cyborg/bootstrap.min.js"></script>
-<script src="cyborg/bootswatch.js"></script>
+{{--<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>--}}
+
+<?php echo HTML::script('cyborg/bootstrap.min.js') ?>
+<?php echo HTML::script('cyborg/bootswatch.js') ?>
+{{--<script src="cyborg/bootstrap.min.js"></script>--}}
+{{--<script src="cyborg/bootswatch.js"></script>--}}
 <script type="text/javascript">
 	/* <![CDATA[ */
 	(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
