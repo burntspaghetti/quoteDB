@@ -28,4 +28,12 @@ class HomeController extends BaseController {
 		return View::make('personas')->with('personas', $personas);
 	}
 
+	public function showPersona($id)
+	{
+		$persona = Persona::find($id);
+		$quotes = Persona::with('quotes')->find($id)->quotes;
+
+		return View::make('personaShow')->with('persona', $persona)->with('quotes', $quotes);
+	}
+
 }

@@ -12,7 +12,7 @@
             {{--<div class="col-lg-6">--}}
             {{--<div class="bs-component">--}}
             <tr>
-                <td>{{$persona->fName . " " . $persona->lName}}</td>
+                <td><a href="{{ action('HomeController@showPersona', $persona->idPersona) }}">{{$persona->fName . " " . $persona->lName}}</a></td>
             </tr>
             {{--</div>--}}
             {{--</div>--}}
