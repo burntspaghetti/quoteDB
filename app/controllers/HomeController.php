@@ -41,4 +41,11 @@ class HomeController extends BaseController {
 
 	}
 
+	public function personas()
+	{
+		$personas = Persona::all();
+
+		return View::make('personas')->with('personas', $personas);
+	}
+
 }

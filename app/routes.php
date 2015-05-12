@@ -6,6 +6,8 @@ Route::post('/quoteDB/search', 'HomeController@search');
 
 Route::get('/quoteDB/searchResults', 'HomeController@searchResults');
 
+Route::get('/quoteDB/personas', 'HomeController@personas');
+
 Route::get('/test', function()
 {
 	return View::make('test');

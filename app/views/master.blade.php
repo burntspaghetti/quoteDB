@@ -69,13 +69,15 @@
 
 
 				<li>
-					<a href="">Personas</a>
+					<a href="{{ action('HomeController@personas') }}">Personas</a>
 				</li>
 			</ul>
 		</div>
 	</div>
 </div>
 
+<br>
+<br>
 
 <div class="container">
 	<div class="row">
