@@ -17,7 +17,7 @@
                     <td>
                         <blockquote>
                             <p>{{$quote->quoteText}}</p>
-                            <small>{{$personaArray[$quote->idPersona]->fName . " " . $personaArray[$quote->idPersona]->lName}} <cite title="Source Title">Source Title</cite></small>
+                            <small>{{$quote->fName . " " . $quote->lName}} <cite title="Source Title">{{$quote->quoteSource1.", ".$quote->quoteSource2}}</cite></small>
                         </blockquote>
                     </td>
                 </tr>

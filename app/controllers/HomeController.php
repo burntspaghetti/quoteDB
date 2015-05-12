@@ -10,33 +10,13 @@ class HomeController extends BaseController {
 	public function search()
 	{
 		$query = Input::get('search');
-		$quotes = DB::select( DB::raw("select * from quote where quoteText like '%$query%';"));
-		
+		$quotes = DB::select( DB::raw("select quote.idQuote, quote.quoteText, quote.quoteSource1, quote.quoteSource2, persona.idPersona, persona.fName, persona.mName, persona.lName
+										from quote, persona 
+										where quoteText like '%war%'
+										and quote.idPersona = persona.idPersona;"));
 
-		$personaArray = array();
-//		$quoteTagIndex = array();
-		foreach($quotes as $quote)
-		{
-			$persona = Persona::find($quote->idPersona);
-			$personaArray[$quote->idPersona] = $persona;
-
-//			$tags = Quote::find($quote->idQuote)->tags;
-//			if($tags)
-//			{
-//				$quoteTagIndex[$quote->idQuote] = $tags;
-//			}
-		}
-
-
-//		$personaPhoto = array();
-//		foreach($personaArray as $persona)
-//		{
-//			$photo = DB::select( DB::raw("select * from photo where personaid = $persona->idPersona limit 1"));
-//			$personaPhoto[$persona->idPersona] = $photo;
-//		}
 
 		return View::make('quoteSearch')->with('quotes', $quotes)
-			                            ->with('personaArray', $personaArray)
 										->with('query', $query);
 
 	}
