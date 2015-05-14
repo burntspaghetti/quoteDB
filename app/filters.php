@@ -11,8 +11,9 @@
 |
 */
 
-App::before(function($request)
+App::before(function()
 {
+
 	//
 });
 

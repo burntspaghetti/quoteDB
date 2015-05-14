@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h3>{{$persona->fName . " " . $persona->lName}}</h3>
+    <h3 align="center">{{$persona->fName . " " . $persona->lName}}</h3>
     <table id="table_id" class="table">
         <thead>
         <tr>
