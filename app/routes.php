@@ -17,6 +17,7 @@ Route::group(array('before' => 'auth'), function()
 //{
 //    User::create([
 //		'username' => '',
+
 //		'email' => '',
 //		'password' => Hash::make('')
 //	]);

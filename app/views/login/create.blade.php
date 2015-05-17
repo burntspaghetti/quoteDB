@@ -2,10 +2,21 @@
 
 @section('content')
 
-
 {{ Form::open([ 'action' => 'LoginController@doLogin', 'class' => 'clearfix', 'style' => 'padding:1em 3em;']) }}
 
-    <!--email Form Input-->
+@if(Session::has('incorrectPassword'))
+    <div align="center">
+        <span class="label label-danger">Incorrect email and/or password combination</span><br>
+    </div>
+    {{Session::forget('incorrectPassword')}}
+@endif
+<div align="center">
+    {{ $errors->first('email', '<p class="label label-danger" style="padding:1em;">:message</p>') }}
+    {{ $errors->first('password', '<p class="label label-danger" style="padding:1em;">:message</p>') }}
+</div>
+
+
+<!--email Form Input-->
 <div class="row">
     <div class="form-group col-md-4 col-md-offset-4">
         {{ Form::label('email', 'Email: ') }}
