@@ -12,7 +12,7 @@ class HomeController extends BaseController {
 		$query = Input::get('search');
 		$quotes = DB::select( DB::raw("select quote.idQuote, quote.quoteText, quote.quoteSource1, quote.quoteSource2, persona.idPersona, persona.fName, persona.mName, persona.lName
 										from quote, persona 
-										where quoteText like '%war%'
+										where quoteText like '%$query%'
 										and quote.idPersona = persona.idPersona;"));
 
 
