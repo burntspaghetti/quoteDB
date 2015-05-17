@@ -40,11 +40,11 @@ return array(
 	|
 	| When using the native session driver, we need a location where session
 	| files may be stored. A default has been set for you but a different
-	| location may be specified. This is only needed for file sessions.
+	| location may be specified. This is only needed for file login.
 	|
 	*/
 
-	'files' => storage_path().'/sessions',
+	'files' => storage_path().'/login',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return array(
 	|--------------------------------------------------------------------------
 	|
 	| When using the "database" or "redis" session drivers, you may specify a
-	| connection that should be used to manage these sessions. This should
+	| connection that should be used to manage these login. This should
 	| correspond to a connection in your database configuration options.
 	|
 	*/
@@ -65,12 +65,12 @@ return array(
 	|--------------------------------------------------------------------------
 	|
 	| When using the "database" session driver, you may specify the table we
-	| should use to manage the sessions. Of course, a sensible default is
+	| should use to manage the login. Of course, a sensible default is
 	| provided for you; however, you are free to change this as needed.
 	|
 	*/
 
-	'table' => 'sessions',
+	'table' => 'login',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return array(
 	|--------------------------------------------------------------------------
 	|
 	| Some session drivers must manually sweep their storage location to get
-	| rid of old sessions from storage. Here are the chances that it will
+	| rid of old login from storage. Here are the chances that it will
 	| happen on a given request. By default, the odds are 2 out of 100.
 	|
 	*/

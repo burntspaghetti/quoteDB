@@ -72,6 +72,15 @@
 					<a href="{{ action('HomeController@personas') }}">Personas</a>
 				</li>
 			</ul>
+
+			</ul>
+			<ul class="nav navbar-nav" style="float: right">
+				{{--if(Auth::user()->username) show this...--}}
+				@if(Auth::user())
+					<li><a href="{{ action('LoginController@logout') }}" class="navbar-nav pull-right">Logout</a></li>
+				@endif
+
+			</ul>
 		</div>
 	</div>
 </div>

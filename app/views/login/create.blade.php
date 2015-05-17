@@ -3,7 +3,7 @@
 @section('content')
 
 
-{{ Form::open([ 'action' => 'SessionsController@store', 'class' => 'clearfix', 'style' => 'padding:1em 3em;']) }}
+{{ Form::open([ 'action' => 'LoginController@doLogin', 'class' => 'clearfix', 'style' => 'padding:1em 3em;']) }}
 
     <!--email Form Input-->
     <div class="form-group">
@@ -19,7 +19,7 @@
 
 
 <button class="btn btn-success" type="submit">Submit</button>
-<a href="{{ action('SessionsController@home') }}" class="btn btn-danger">Cancel</a>
+<a href="{{ action('LoginController@login') }}" class="btn btn-danger">Cancel</a>
 
 {{ Form::close() }}
 
