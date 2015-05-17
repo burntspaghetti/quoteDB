@@ -29,7 +29,11 @@
 
     <script>
         $(document).ready( function () {
-            $('#table_id').DataTable();
+            $('#table_id').DataTable(
+                    {
+                        "iDisplayLength": 100
+                    }
+            );
         } );
     </script>
 @endsection
