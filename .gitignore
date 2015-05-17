@@ -12,3 +12,4 @@ app/config/database.php
 mountain.sql
 app/storage/
 dbExport.sql
+app/config/prod/
