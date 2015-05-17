@@ -58,7 +58,7 @@
 		</div>
 		<div class="navbar-collapse collapse" id="navbar-main">
 			<ul class="nav navbar-nav">
-
+				@if(Auth::user())
 				{{ Form::open([ 'action' => 'HomeController@search', 'class' => 'navbar-form navbar-left']) }}
 
 
@@ -68,10 +68,11 @@
 				</div>
 
 				{{ Form::close() }}
+				@endif
 
 
 				<li>
-					<a href="{{ action('HomeController@personas') }}">Personas</a>
+					<a href="{{ action('PersonaController@personas') }}">Personas</a>
 				</li>
 			</ul>
 
@@ -88,7 +89,20 @@
 </div>
 
 <br>
+<div class="row">
+	<div class="col-sm-6 col-sm-offset-3">
+		@if(Session::has('flash_message'))
+			<div align="center" class="alert alert-success alert-dismissible" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				{{ Session::get('flash_message') }}
+			</div>
+		@endif
+	</div>
+</div>
+
+
 <br>
+
 
 <div class="container">
 	<div class="row">

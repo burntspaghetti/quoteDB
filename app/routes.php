@@ -8,9 +8,13 @@ Route::group(array('before' => 'auth'), function()
 
 	Route::get('/quoteDB/searchResults', 'HomeController@searchResults');
 
-	Route::get('/quoteDB/personas', 'HomeController@personas');
+	Route::get('/quoteDB/personas', 'PersonaController@personas');
 
-	Route::get('/quoteDB/persona/{idPersona}', 'HomeController@showPersona');
+	Route::get('/quoteDB/persona/{idPersona}', 'PersonaController@showPersona');
+
+	Route::get('/quoteDB/personas/create', 'PersonaController@create');
+
+	Route::post('quoteDB/personas/store', 'PersonaController@store');
 });
 
 //Route::get('/', function()
