@@ -1,6 +1,7 @@
 <html lang="en"><head>
 	<meta charset="utf-8">
 	<title>quoteDB</title>
+	<link rel="shortcut icon" href="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/128/database.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
