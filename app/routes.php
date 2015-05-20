@@ -8,6 +8,7 @@ Route::group(array('before' => 'auth'), function()
 
 	Route::get('/quoteDB/searchResults', 'HomeController@searchResults');
 
+
 	Route::get('/quoteDB/personas', 'PersonaController@personas');
 
 	Route::get('/quoteDB/persona/{idPersona}', 'PersonaController@showPersona');
@@ -28,7 +29,6 @@ Route::group(array('before' => 'auth'), function()
 	Route::post('/quoteDB/persona/quotes/store', 'QuoteController@store');
 
 	Route::get('/quoteDB/persona/quotes/edit/{idPersona}/{idQuote}', 'QuoteController@edit');
-//	Route::get('/quoteDB/persona/quotes/edit/{idPersona}', 'QuoteController@edit');
 
 	Route::post('/quoteDB/persona/quotes/saveEdit', 'QuoteController@update');
 

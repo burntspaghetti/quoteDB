@@ -33,7 +33,6 @@ class QuoteController extends BaseController {
 		$validator = Validator::make(Input::all(), Quote::$rules);
 		if($validator->fails()) {return Redirect::back()->withErrors($validator)->withInput();}
 
-		$idPersona = Input::get('idPersona');
 		$idQuote = Input::get('idQuote');
 
 		$quote = Quote::find($idQuote);
