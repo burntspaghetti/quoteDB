@@ -4,6 +4,12 @@
 
     <h3 align="center">{{$persona->fName . " " . $persona->lName}}</h3>
     <div align="center">
+        <br>
+        <a href="{{ action('QuoteController@create', $persona->idPersona) }}" class="btn btn-primary">New Quote</a>
+
+        <br>
+        <br>
+        
         <a href="{{ action('PersonaController@edit', $persona->idPersona) }}">Edit Persona</a>
     </div>
 
@@ -31,7 +37,11 @@
 
     <script>
         $(document).ready( function () {
-            $('#table_id').DataTable();
+            $('#table_id').DataTable(
+                    {
+                        "iDisplayLength": 100
+                    }
+            );
         } );
     </script>
 @endsection

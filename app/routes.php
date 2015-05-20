@@ -21,6 +21,11 @@ Route::group(array('before' => 'auth'), function()
 	Route::post('/quoteDB/persona/update/{id}', 'PersonaController@update');
 
 	Route::get('quoteDB/persona/delete/{id}', 'PersonaController@delete');
+
+
+	Route::get('/quoteDB/persona/quotes/create/{idPersona}', 'QuoteController@create');
+
+	Route::post('/quoteDB/persona/quotes/store', 'QuoteController@store');
 });
 
 //Route::get('/', function()
