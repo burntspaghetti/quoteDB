@@ -31,8 +31,10 @@
 
         {{ Form::hidden('idPersona', $persona->idPersona) }}
 
-        <button class="btn btn-success" type="submit">Submit</button>
-        <a href="{{ action('PersonaController@showPersona', $persona->idPersona) }}" class="btn btn-danger">Cancel</a>
+        <div align="center">
+            <button class="btn btn-success" type="submit">Submit</button>
+            <a href="{{ action('PersonaController@showPersona', $persona->idPersona) }}" class="btn btn-danger">Cancel</a>
+        </div>
 
     {{ Form::close() }}
 

@@ -1,16 +1,15 @@
 @extends('master')
 
 @section('content')
-
-    <h3 align="center">{{$persona->fName . " " . $persona->lName}}</h3>
     <div align="center">
+        <h3>{{$persona->fName . " " . $persona->lName}}</h3>
         <br>
         <a href="{{ action('QuoteController@create', $persona->idPersona) }}" class="btn btn-primary">New Quote</a>
-
         <br>
         <br>
-        
         <a href="{{ action('PersonaController@edit', $persona->idPersona) }}">Edit Persona</a>
+        <br>
+        <br>
     </div>
 
     <table id="table_id" class="table">
@@ -25,8 +24,22 @@
                 <td>
                     <blockquote>
                         <p>{{$quote->quoteText}}</p>
-                        <small>{{$quote->fName . " " . $quote->lName}} <cite title="Source Title">{{$quote->quoteSource1.", ".$quote->quoteSource2}}</cite></small>
+                        @if($quote->quoteSource1 && $quote->quoteSource2)
+                            <small>{{$quote->fName . " " . $quote->lName}} <cite title="Source Title">{{$quote->quoteSource1.", ".$quote->quoteSource2}}</cite></small>
+                        @elseif($quote->quoteSource1)
+                            <small>{{$quote->fName . " " . $quote->lName}} <cite title="Source Title">{{$quote->quoteSource1}}</cite></small>
+                        @elseif(!$quote->quoteSource1 && !$quote->quoteSource2)
+                            <small>
+                                <cite title="Source Title">
+                                    <a href="{{ action('QuoteController@edit', array($persona->idPersona, $quote->idQuote)) }}">citation</a>
+                                </cite>
+                            </small>
+                        @endif
+                        <br>
                     </blockquote>
+                    <div class="pull-right">
+                        <small><a href="{{ action('QuoteController@edit', array($persona->idPersona, $quote->idQuote)) }}">edit</a></small>
+                    </div>
                 </td>
             </tr>
         @endforeach

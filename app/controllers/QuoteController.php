@@ -11,11 +11,52 @@ class QuoteController extends BaseController {
 
 	public function store()
 	{
+		$idPersona = Input::get('idPersona');
 		$validator = Validator::make(Input::all(), Quote::$rules);
 		if($validator->fails()) {return Redirect::back()->withErrors($validator)->withInput();}
 		$quote = Quote::create(Input::all());
 
-		return Redirect::action('PersonaController@showPersona')->with('flash_message', 'New Quote Created.');
+		return Redirect::action('PersonaController@showPersona', $idPersona)->with('flash_message', 'New Quote Created.');
 	}
+
+
+	public function edit($idPersona, $idQuote)
+	{
+		$quote = Quote::find($idQuote);
+		$persona = Persona::find($idPersona);
+
+		return View::make('quotes.edit')->with('persona', $persona)->with('quote', $quote);
+	}
+
+	public function update()
+	{
+		dd('save edit');
+	}
+
+	public function delete($idQuote)
+	{
+		$quote = Quote::find($idQuote);
+		$quote->delete();
+
+		return Redirect::action('PersonaController@showPersona', $quote->idPersona)->with('flash_message', 'Quote deleted.');
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
