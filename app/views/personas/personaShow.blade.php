@@ -3,6 +3,10 @@
 @section('content')
 
     <h3 align="center">{{$persona->fName . " " . $persona->lName}}</h3>
+    <div align="center">
+        <a href="{{ action('PersonaController@edit', $persona->idPersona) }}">Edit Persona</a>
+    </div>
+
     <table id="table_id" class="table">
         <thead>
         <tr>
