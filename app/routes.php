@@ -30,7 +30,7 @@ Route::group(array('before' => 'auth'), function()
 	Route::get('/quoteDB/persona/quotes/edit/{idPersona}/{idQuote}', 'QuoteController@edit');
 //	Route::get('/quoteDB/persona/quotes/edit/{idPersona}', 'QuoteController@edit');
 
-	Route::post('/quoteDB/persona/quotes/saveEdit/{idPersona}/{idQuote}', 'QuoteController@update');
+	Route::post('/quoteDB/persona/quotes/saveEdit', 'QuoteController@update');
 
 	Route::get('/quoteDB/persona/quotes/delete/{idQuote}', 'QuoteController@delete');
 

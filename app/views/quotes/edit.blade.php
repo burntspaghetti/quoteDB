@@ -30,14 +30,13 @@
     </div>
 
     {{ Form::hidden('idPersona', $persona->idPersona) }}
+    {{ Form::hidden('idQuote', $quote->idquote) }}
 
     <div align="center">
         <button class="btn btn-success" type="submit">Submit</button>
         <a href="{{ action('PersonaController@showPersona', $persona->idPersona) }}" class="btn btn-danger">Cancel</a>
     </div>
 
-
-    {{ Form::hidden('id', $persona->idPersona) }}
 
     {{ Form::close() }}
 

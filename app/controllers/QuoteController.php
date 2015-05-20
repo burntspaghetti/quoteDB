@@ -30,7 +30,19 @@ class QuoteController extends BaseController {
 
 	public function update()
 	{
-		dd('save edit');
+		$validator = Validator::make(Input::all(), Quote::$rules);
+		if($validator->fails()) {return Redirect::back()->withErrors($validator)->withInput();}
+
+		$idPersona = Input::get('idPersona');
+		$idQuote = Input::get('idQuote');
+
+		$quote = Quote::find($idQuote);
+		$quote->quoteText = Input::get('quoteText');
+		$quote->quoteSource1 = Input::get('quoteSource1');
+		$quote->quoteSource2 = Input::get('quoteSource2');
+		$quote->save();
+
+		return Redirect::action('PersonaController@showPersona', $quote->idPersona)->with('flash_message', 'Quote successfully edited.');
 	}
 
 	public function delete($idQuote)
