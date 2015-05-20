@@ -25,7 +25,7 @@ class LoginController extends BaseController {
 		
 		if(Auth::attempt(Input::only('email', 'password')))
 		{
-			return Redirect::intended('/quoteDB');
+			return Redirect::intended('/');
 		}
 		else
 		{
