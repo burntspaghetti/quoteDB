@@ -41,18 +41,18 @@
 
    <div class="row">
        <div class="form-group col-md-4 col-md-offset-4">
-           {{ Form::label('DOB', 'DOB ') }}
-           {{ Form::input('text', 'DOB', null, array('class' => 'form-control')) }}
-           {{ $errors->first('DOB', '<p class="text-danger" style="padding:1em;">:message</p>') }}
+           {{ Form::label('dateBorn', 'DOB ') }}
+           {{ Form::input('text', 'dateBorn', null, array('class' => 'form-control')) }}
+           {{ $errors->first('dateBorn', '<p class="text-danger" style="padding:1em;">:message</p>') }}
        </div>
    </div>
 
 
     <div class="row">
         <div class="form-group col-md-4 col-md-offset-4">
-            {{ Form::label('DOD', 'DOD ') }}
-            {{ Form::input('text', 'DOD', null, array('class' => 'form-control')) }}
-            {{ $errors->first('DOD', '<p class="text-danger" style="padding:1em;">:message</p>') }}
+            {{ Form::label('dateDied', 'DOD ') }}
+            {{ Form::input('text', 'dateDied', null, array('class' => 'form-control')) }}
+            {{ $errors->first('dateDied', '<p class="text-danger" style="padding:1em;">:message</p>') }}
         </div>
     </div>
 
