@@ -3,7 +3,6 @@
 @section('content')
 
     <h3>Edit Persona</h3>
-    <a href="{{ action('PersonaController@delete', $persona->idPersona) }}" class="btn btn-danger">Delete Persona</a>
 
     <hr/>
 
@@ -71,4 +70,15 @@
 
     {{ Form::close() }}
 
+
+    <br>
+    <br>
+    <h3>Delete Persona</h3>
+    <hr/>
+
+        <a href="{{ action('PersonaController@delete', $persona->idPersona) }}" class="btn btn-xs btn-danger">Delete Persona</a>
+
+    <br>
+    <br>
+    <br>
 @endsection
