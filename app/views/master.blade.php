@@ -16,8 +16,12 @@
 	<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.js"></script>
 
 
-	<?php echo HTML::style('cyborg/bootstrap.css') ?>
-	<?php echo HTML::style('cyborg/bootswatch.min.css') ?>
+	<?php //echo HTML::style('cyborg/bootstrap.css') ?>
+	<?php //echo HTML::style('cyborg/bootswatch.min.css') ?>
+
+	<?php echo HTML::style('readable/bootstrap.css') ?>
+	<?php echo HTML::style('readable/bootswatch.min.css') ?>
+
 	{{--<link rel="stylesheet" href="cyborg/bootstrap.css" media="screen">--}}
 	{{--<link rel="stylesheet" href="cyborg/bootswatch.min.css">--}}
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->

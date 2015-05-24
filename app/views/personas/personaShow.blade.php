@@ -2,7 +2,10 @@
 
 @section('content')
     <div align="center">
+        <br>
+        <br>
         <h3>{{$persona->fName . " " . $persona->lName}}</h3>
+        <hr/>
         <br>
         <a href="{{ action('QuoteController@create', $persona->idPersona) }}" class="btn btn-primary">New Quote</a>
         <br>

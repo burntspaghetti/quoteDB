@@ -1,7 +1,9 @@
 @extends('master')
 
 @section('content')
-
+    <br>
+    <br>
+    <br>
     <div align="center">
         <a href="{{ action('PersonaController@create') }}" class="btn btn-default">Create New Persona</a>
     </div>
