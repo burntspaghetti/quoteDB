@@ -2,6 +2,7 @@
 
 @section('content')
 
+    <br>
 {{ Form::open([ 'action' => 'LoginController@doLogin', 'class' => 'clearfix', 'style' => 'padding:1em 3em;']) }}
 
 @if(Session::has('incorrectPassword'))

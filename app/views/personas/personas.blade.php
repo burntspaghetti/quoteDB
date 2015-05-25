@@ -7,6 +7,8 @@
     <div align="center">
         <a href="{{ action('PersonaController@create') }}" class="btn btn-default">Create New Persona</a>
     </div>
+    <br>
+    <br>
     <table id="table_id" class="table">
         <thead>
         <tr>
@@ -18,7 +20,7 @@
             {{--<div class="col-lg-6">--}}
             {{--<div class="bs-component">--}}
             <tr>
-                <td><a href="{{ action('PersonaController@showPersona', $persona->idPersona) }}">{{$persona->fName . " " . $persona->lName}}</a></td>
+                <td><h3><a href="{{ action('PersonaController@showPersona', $persona->idPersona) }}">{{$persona->fName . " " . $persona->lName}}</a></h3></td>
             </tr>
             {{--</div>--}}
             {{--</div>--}}
