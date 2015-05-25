@@ -52,17 +52,3 @@ Route::group(array('before' => 'auth'), function()
 Route::get('/login', 'LoginController@login');
 Route::post('/doLogin', 'LoginController@doLogin');
 Route::get('/logout', 'LoginController@logout');
-
-Route::get('/test', function()
-{
-	date_default_timezone_set("America/Chicago");
-	$time = date("h:i");
-	$ampm = date("a");
-//	dd($time . " " .$ampm);
-
-	if($time > '08:00' && $ampm = 'pm')
-	{
-		dd('its greater than 8');
-	}
-
-});

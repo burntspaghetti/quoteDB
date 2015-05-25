@@ -23,14 +23,15 @@
 		date_default_timezone_set("America/Chicago");
 		$time = date("h:i");
 		$ampm = date("a");
-		dd($time . " " .$ampm);
 	?>
 	@if($time > '08:00' && $ampm = 'pm' || $time < '07:00' && $ampm = 'am')
 		{{HTML::style('darkly/bootstrap.css') }}
 		{{HTML::style('darkly/bootswatch.min.css')}}
 	@else
-		{{HTML::style('readable/bootstrap.css') }}
-		{{HTML::style('readable/bootswatch.min.css')}}
+		{{--{{HTML::style('readable/bootstrap.css') }}--}}
+		{{--{{HTML::style('readable/bootswatch.min.css')}}--}}
+		{{HTML::style('darkly/bootstrap.css') }}
+		{{HTML::style('darkly/bootswatch.min.css')}}
 	@endif
 
 
