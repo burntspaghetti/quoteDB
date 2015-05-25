@@ -3,11 +3,10 @@
 @section('content')
     <br>
     <br>
-    <br>
     <div align="center">
         <a href="{{ action('PersonaController@create') }}" class="btn btn-default">Create New Persona</a>
     </div>
-    <br>
+    
     <br>
     <table id="table_id" class="table">
         <thead>
