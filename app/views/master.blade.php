@@ -28,10 +28,8 @@
 		{{HTML::style('darkly/bootstrap.css') }}
 		{{HTML::style('darkly/bootswatch.min.css')}}
 	@else
-		{{--{{HTML::style('readable/bootstrap.css') }}--}}
-		{{--{{HTML::style('readable/bootswatch.min.css')}}--}}
-		{{HTML::style('darkly/bootstrap.css') }}
-		{{HTML::style('darkly/bootswatch.min.css')}}
+		{{HTML::style('readable/bootstrap.css') }}
+		{{HTML::style('readable/bootswatch.min.css')}}
 	@endif
 
 
