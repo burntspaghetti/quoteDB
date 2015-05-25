@@ -1,5 +1,13 @@
 <?php
 
+
+Route::get('/test', function()
+{
+	date_default_timezone_set("America/Belize");
+	$time = date("h:i");
+	$ampm = date("a");
+	dd($time . " " .$ampm);
+});
 Route::group(array('before' => 'auth'), function()
 {
 	Route::get('/', 'HomeController@home');
