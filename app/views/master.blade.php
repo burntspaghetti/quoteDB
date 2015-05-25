@@ -19,8 +19,21 @@
 	<?php //echo HTML::style('cyborg/bootstrap.css') ?>
 	<?php //echo HTML::style('cyborg/bootswatch.min.css') ?>
 
-	<?php echo HTML::style('readable/bootstrap.css') ?>
-	<?php echo HTML::style('readable/bootswatch.min.css') ?>
+	<?php
+		date_default_timezone_set("America/Chicago");
+		$time = date("h:i");
+		$ampm = date("a");
+		dd($time . " " .$ampm);
+	?>
+	@if($time > '08:00' && $ampm = 'pm' || $time < '07:00' && $ampm = 'am')
+		{{HTML::style('darkly/bootstrap.css') }}
+		{{HTML::style('darkly/bootswatch.min.css')}}
+	@else
+		{{HTML::style('readable/bootstrap.css') }}
+		{{HTML::style('readable/bootswatch.min.css')}}
+	@endif
+
+
 
 	{{--<link rel="stylesheet" href="cyborg/bootstrap.css" media="screen">--}}
 	{{--<link rel="stylesheet" href="cyborg/bootswatch.min.css">--}}

@@ -29,7 +29,7 @@
     </table>
 
 
-    <script>
+m    <script>
         $(document).ready( function () {
             $('#table_id').DataTable(
                     {
