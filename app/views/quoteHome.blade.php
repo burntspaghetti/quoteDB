@@ -14,7 +14,7 @@
                     {{ Form::input('text', 'search', null, array('class' => 'form-control input-lg')) }}
                 </div>
 
-                <button class="btn btn-default btn-lg btn-block" type="submit">Search</button>
+                {{--<button class="btn btn-default btn-lg btn-block" type="submit">Search</button>--}}
 
                 {{ Form::close() }}
 

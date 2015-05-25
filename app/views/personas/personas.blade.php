@@ -5,9 +5,11 @@
     <br>
     <div align="center">
         <a href="{{ action('PersonaController@create') }}" class="btn btn-default">Create New Persona</a>
+        <br>
+        <br>
+        <a href="#bottom" ><i class="fa fa-arrow-down fa-2"></i></a>
     </div>
-    
-    <br>
+
     <table id="table_id" class="table">
         <thead>
         <tr>
@@ -28,8 +30,11 @@
         </tbody>
     </table>
 
+    <div id="bottom">
 
-m    <script>
+    </div>
+
+   <script>
         $(document).ready( function () {
             $('#table_id').DataTable(
                     {

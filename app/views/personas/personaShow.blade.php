@@ -13,6 +13,7 @@
         <a href="{{ action('PersonaController@edit', $persona->idPersona) }}">Edit Persona</a>
         <br>
         <br>
+        <a href="#bottom" ><i class="fa fa-arrow-down fa-2"></i></a>
     </div>
 
     <table id="table_id" class="table">
@@ -49,7 +50,9 @@
 
         </tbody>
     </table>
+<div id="bottom">
 
+</div>
 
     <script>
         $(document).ready( function () {
