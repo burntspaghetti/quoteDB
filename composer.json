@@ -6,7 +6,8 @@
 	"type": "project",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"intervention/image": "~2.1"
+		"intervention/image": "~2.1",
+		"fabpot/goutte": "^2.0"
 	},
 	"autoload": {
 		"classmap": [

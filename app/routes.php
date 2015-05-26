@@ -1,4 +1,11 @@
 <?php
+use Goutte\Client;
+
+
+Route::get('/test', function()
+{
+	$client = new Client();
+});
 
 Route::group(array('before' => 'auth'), function()
 {
