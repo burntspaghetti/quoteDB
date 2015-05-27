@@ -1,63 +1,10 @@
 <?php
 use Goutte\Client;
-use Symfony\Component\DomCrawler\Crawler;
-
 
 Route::get('/test', function()
 {
 
-//	$html = <<<'HTML'
-//<!DOCTYPE html>
-//<html>
-//    <body>
-//			<ul>
-//				<li><b>test text</b> <a href="/wiki/Necessity" title="Necessity">Necessity</a> more test text <a href="/wiki/Succeed" title="Succeed" class="mw-redirect">succeed</a>, I <a href="/wiki/Know" title="Know" class="mw-redirect">know</a> it, the less uneasiness I shall have to go through..</b>
-//					<ul>
-//						<li><a rel="nofollow" class="external text" href="http://oll.libertyfund.org/?option=com_staticxt&amp;staticfile=show.php%3Ftitle=800&amp;chapter=85791&amp;layout=html&amp;Itemid=27">Letter to John Page (15 July 1763); published in <i>The Works of Thomas Jefferson</i> (1905)</a>.</li>
-//					</ul>
-//				</li>
-//			</ul>
-//    </body>
-//</html>
-//HTML;
-//
-//	$crawler = new Crawler($html);
-//
-////	foreach ($crawler as $domElement) {
-////		print $domElement->nodeName;
-////	}
-//
-////	$crawler = $crawler->filterXPath('descendant-or-self::ul/li');
-//	$crawler->filter('ul')->each(function ($node)
-//	{
-//		var_dump($node->text());
-//	});
-//	return;
-//	dd($crawler);
 	
-
-//	$html = <<<'HTML'
-//			<!DOCTYPE html>
-//			<html>
-//				<body>
-//					<ul>
-//						<li><b>test text</b> <a href="/wiki/Necessity" title="Necessity">Necessity</a> more test text <a href="/wiki/Succeed" title="Succeed" class="mw-redirect">succeed</a>, I <a href="/wiki/Know" title="Know" class="mw-redirect">know</a> it, the less uneasiness I shall have to go through..</b>
-//							<ul>
-//								<li><a rel="nofollow" class="external text" href="http://oll.libertyfund.org/?option=com_staticxt&amp;staticfile=show.php%3Ftitle=800&amp;chapter=85791&amp;layout=html&amp;Itemid=27">Letter to John Page (15 July 1763); published in <i>The Works of Thomas Jefferson</i> (1905)</a>.</li>
-//							</ul>
-//						</li>
-//					</ul>
-//				</body>
-//			</html>
-//HTML;
-//
-//
-//	$crawler = new Crawler($html);
-//
-//	foreach ($crawler as $domElement) {
-//		print $domElement->nodeName;
-//	}
-
 
 //	dd('test');
 	
@@ -67,14 +14,28 @@ Route::get('/test', function()
 //
 	//how to deal with misattributed quotes?
 		//if string contains "misattributed" then remove it
-
-	//if string contains the string "Quotes" filter it out
-	//if string contains 1.* filter it out
-	//if string starts with # filter it out
+	//this will not catch them all.
+	//if parent element is a div with a background color of #FCFCC or #FFE7CC then remove all the chil ul > li's
+	
 	//how to filter out second li?
 	//check to see if previous item x-1 contains string of x
 		//if yes, should remove x and keep source in quote text? or remove string from x-1 and then make x string = quote source?
 	$quotes = $crawler->filter('ul > li');
+
+//	echo '<pre>';
+//	print_r($quotes);
+//	echo '</pre>';
+//	return;
+
+//	dd($quotes->nodeValue);
+	foreach($quotes as $quote)
+	{
+//		dd($quote);
+		
+	    var_dump($quote);
+	}
+
+	return;
 
 	$quoteArray = [];
 	foreach($quotes as $quote)
