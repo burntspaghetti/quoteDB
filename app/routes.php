@@ -74,10 +74,33 @@ Route::get('/test', function()
 	//how to filter out second li?
 	//check to see if previous item x-1 contains string of x
 		//if yes, should remove x and keep source in quote text? or remove string from x-1 and then make x string = quote source?
-	$crawler->filter('ul > li')->each(function ($node) {
-		var_dump($node->text());
-//		print $node->text()."\n";
-	});
+	$quotes = $crawler->filter('ul > li');
+
+	$quoteArray = [];
+	foreach($quotes as $quote)
+	{
+		if(!is_numeric(substr($quote->nodeValue, 0, 1)))
+		{
+			array_push($quoteArray, $quote->nodeValue);
+		}
+	}
+	dd($quoteArray);
+
+//	substr($quote, 0, 1);  // abcd
+//	foreach($quoteArray as $quote)
+//	{
+//		if(is_numeric(substr($quote, 0, 1)))
+//		{
+//			dd('its a number!');
+//		}
+//		dd($quote);
+//	}
+	
+	
+//	$crawler->filter('ul > li')->each(function ($node) {
+//		var_dump($node->text());
+////		print $node->text()."\n";
+//	});
 
 //	dd($crawler);
 	
