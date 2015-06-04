@@ -34,9 +34,7 @@ Route::get('/test', function()
 		}
 	}
 
-	
 	return View::make('quoteFilter')->with('quoteArray', $quoteArray);
-	
 });
 
 Route::group(array('before' => 'auth'), function()
@@ -73,8 +71,10 @@ Route::group(array('before' => 'auth'), function()
 
 	Route::get('/persona/quotes/delete/{idQuote}', 'QuoteController@delete');
 
-});
 
+
+});
+Route::post('/storeScrape', 'QuoteController@storeScrape');
 //Route::get('/', function()
 //{
 //    User::create([

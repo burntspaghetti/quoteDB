@@ -52,22 +52,15 @@ class QuoteController extends BaseController {
 		return Redirect::action('PersonaController@showPersona', $quote->idPersona)->with('flash_message', 'Quote deleted.');
 	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	public function storeScrape()
+	{
+		$input = Input::all();
+		//foreach input
+		//find persona
+		//create new quote
+		//set quote text = text
+		//set idPersona = idpersona
+		//save
+	}
 
 }
