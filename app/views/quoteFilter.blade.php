@@ -18,6 +18,8 @@
     ?>
 @endforeach
 
+{{ Form::hidden('idPersona', $idPersona) }}
+
 
 
 <button class="btn btn-success" type="submit">Submit</button>

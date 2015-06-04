@@ -1,4 +1,5 @@
 <?php
+use Goutte\Client;
 
 class QuoteController extends BaseController {
 
@@ -52,15 +53,75 @@ class QuoteController extends BaseController {
 		return Redirect::action('PersonaController@showPersona', $quote->idPersona)->with('flash_message', 'Quote deleted.');
 	}
 
+	public function scraper($idPersona)
+	{
+		$persona = Persona::find($idPersona);
+		return View::make('personas.scraper')->with('persona', $persona);
+	}
+
+	public function scrapeURL()
+	{
+//		$validator = Validator::make(
+//			array('wikiquoteURL' => 'required')
+//		);
+//
+//		if ($validator->fails())
+//		{
+//			return Redirect::back()->withErrors($validator);
+//		}
+
+		$client = new Client();
+
+		$crawler = $client->request('GET', Input::get('wikiquoteURL'));
+
+		$quotes = $crawler->filter('ul > li');
+
+		$quoteArray = [];
+
+		foreach($quotes as $quote)
+		{
+			if(strpos($quote->nodeValue, 'Create account') !== false)
+			{
+				break;
+			}
+			elseif(!is_numeric(substr($quote->nodeValue, 0, 1)))
+			{
+				array_push($quoteArray, $quote->nodeValue);
+			}
+		}
+
+		$quoteCount = count($quoteArray);
+		for($x = 0; $x < $quoteCount - 1; $x++)
+		{
+			if(strpos($quoteArray[$x], $quoteArray[$x + 1]) !== false)
+			{
+				unset($quoteArray[$x+1]);
+				$quoteArray = array_values($quoteArray);
+				$quoteCount = count($quoteArray);
+			}
+		}
+
+		return View::make('quoteFilter')->with('quoteArray', $quoteArray)->with('idPersona', Input::get('idPersona'));
+	}
+
 	public function storeScrape()
 	{
 		$input = Input::all();
-		//foreach input
-		//find persona
-		//create new quote
-		//set quote text = text
-		//set idPersona = idpersona
-		//save
+
+		$idPersona = Input::get('idPersona');
+
+		foreach($input as $quote)
+		{
+		    if(!is_numeric($quote))
+		    {
+		        $newQuote = new Quote;
+				$newQuote->quoteText = $quote;
+				$newQuote->idPersona = $idPersona;
+				$newQuote->save();
+		    }
+		}
+
+		return Redirect::action('PersonaController@showPersona', $idPersona);
 	}
 
 }

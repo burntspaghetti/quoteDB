@@ -3,17 +3,27 @@
 @section('content')
     <div align="center">
         <br>
-        <br>
         <h3>{{$persona->fName . " " . $persona->lName}}</h3>
         <hr/>
         <br>
-        <a href="{{ action('QuoteController@create', $persona->idPersona) }}" class="btn btn-primary">New Quote</a>
+        <div class="btn-group" role="group" aria-label="...">
+            <a href="{{ action('QuoteController@create', $persona->idPersona) }}" class="btn btn-default">New Quote</a>
+            <a href="{{ action('PersonaController@edit', $persona->idPersona) }}" class="btn btn-default">Edit Persona</a>
+            <a href="{{ action('QuoteController@scraper', $persona->idPersona) }}" class="btn btn-default">Scraper</a>
+            <a href="#bottom" class="btn btn-default">Down &nbsp;<i class="fa fa-arrow-down fa-2"></i></a>
+
+        </div>
+
         <br>
         <br>
-        <a href="{{ action('PersonaController@edit', $persona->idPersona) }}">Edit Persona</a>
+
         <br>
         <br>
-        <a href="#bottom" ><i class="fa fa-arrow-down fa-2"></i></a>
+
+        <br>
+
+
+        <br>
     </div>
 
     <table id="table_id" class="table">

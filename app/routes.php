@@ -71,10 +71,14 @@ Route::group(array('before' => 'auth'), function()
 
 	Route::get('/persona/quotes/delete/{idQuote}', 'QuoteController@delete');
 
+	Route::post('/storeScrape', 'QuoteController@storeScrape');
 
+	Route::post('/scrapeURL', 'QuoteController@scrapeURL');
+
+	Route::get('/scraper/{idPersona}', 'QuoteController@scraper');
 
 });
-Route::post('/storeScrape', 'QuoteController@storeScrape');
+
 //Route::get('/', function()
 //{
 //    User::create([
