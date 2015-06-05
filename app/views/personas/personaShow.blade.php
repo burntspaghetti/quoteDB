@@ -11,18 +11,8 @@
             <a href="{{ action('PersonaController@edit', $persona->idPersona) }}" class="btn btn-default">Edit Persona</a>
             <a href="{{ action('QuoteController@scraper', $persona->idPersona) }}" class="btn btn-default">Scraper</a>
             <a href="#bottom" class="btn btn-default">Down &nbsp;<i class="fa fa-arrow-down fa-2"></i></a>
-
         </div>
-
         <br>
-        <br>
-
-        <br>
-        <br>
-
-        <br>
-
-
         <br>
     </div>
 

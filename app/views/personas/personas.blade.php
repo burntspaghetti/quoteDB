@@ -2,12 +2,11 @@
 
 @section('content')
     <br>
-    <br>
     <div align="center">
-        <a href="{{ action('PersonaController@create') }}" class="btn btn-default">Create New Persona</a>
-        <br>
-        <br>
-        <a href="#bottom" ><i class="fa fa-arrow-down fa-2"></i></a>
+        <div class="btn-group" role="group" aria-label="...">
+            <a href="{{ action('PersonaController@create') }}" class="btn btn-default">Create New Persona</a>
+            <a href="#bottom" class="btn btn-default">Down &nbsp;<i class="fa fa-arrow-down fa-2"></i></a>
+        </div>
     </div>
 
     <table id="table_id" class="table">
