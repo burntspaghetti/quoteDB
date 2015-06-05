@@ -3,22 +3,26 @@
 
 {{ Form::open([ 'action' => 'QuoteController@storeScrape', 'class' => 'clearfix', 'style' => 'padding:1em 3em;']) }}
 
-<?php
-    $x = 1;
-?>
-@foreach($quoteArray as $quote)
-    <ul>
-        <li>
-            {{$quote}}
-            {{Form::checkbox($x, $quote, true)}}
-        </li>
-    </ul>
-    <?php
-        $x++;
-    ?>
-@endforeach
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Quote</th>
+            <th>Approve</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php $x = 1;?>
+    @foreach($quoteArray as $quote)
+        <tr>
+            <td>{{$quote}}</td>
+            <td>{{Form::checkbox($x, $quote, true)}}</td>
+        </tr>
+        <?php $x++; ?>
+    @endforeach
+    </tbody>
+</table>
 
-{{ Form::hidden('idPersona', $idPersona) }}
+{{--{{ Form::hidden('idPersona', $idPersona) }}--}}
 
 
 

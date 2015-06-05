@@ -61,14 +61,15 @@ class QuoteController extends BaseController {
 
 	public function scrapeURL()
 	{
-//		$validator = Validator::make(
-//			array('wikiquoteURL' => 'required')
-//		);
-//
-//		if ($validator->fails())
-//		{
-//			return Redirect::back()->withErrors($validator);
-//		}
+		$validation = Validator::make(
+			Input::all(), array(
+				'wikiquoteURL' => 'required'
+			)
+		);
+
+		if ($validation->fails()) {
+			return Redirect::back()->withInput()->withErrors($validation->messages());
+		}
 
 		$client = new Client();
 
