@@ -22,9 +22,7 @@
     </tbody>
 </table>
 
-{{--{{ Form::hidden('idPersona', $idPersona) }}--}}
-
-
+{{ Form::hidden('idPersona', $idPersona) }}
 
 <button class="btn btn-success" type="submit">Submit</button>
 <a href="{{ action('HomeController@home') }}" class="btn btn-danger">Cancel</a>
