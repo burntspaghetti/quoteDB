@@ -94,7 +94,13 @@ class QuoteController extends BaseController {
 		$quoteCount = count($quoteArray);
 		for($x = 0; $x < $quoteCount - 1; $x++)
 		{
-			if(strpos($quoteArray[$x], $quoteArray[$x + 1]) !== false)
+			if($quoteArray[$x] == '')
+			{
+				unset($quoteArray[$x]);
+				$quoteArray = array_values($quoteArray);
+				$quoteCount = count($quoteArray);
+			}
+			elseif(strpos($quoteArray[$x], $quoteArray[$x + 1]) !== false)
 			{
 				unset($quoteArray[$x+1]);
 				$quoteArray = array_values($quoteArray);
