@@ -1,25 +1,30 @@
-## Laravel PHP Framework
+#quoteDB
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+>"Make your own Bible. Select and collect all the words and sentences that in all your readings have been to you like the blast of a trumpet."
+-Ralph Waldo Emerson
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+##Project Summary
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+quoteDB is a web-based project used to organize and quickly query large amounts of quotes from various sources. quoteDB enables users to create personas and then add quotes with sources to the persona. 
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
 
-## Official Documentation
+##Problem Summary
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
+Mobile devices do not have a "ctrl-f" option and other web-based quote databases like wikiquote do not allow for querying of the entire quote database. Collecting quotes and other bits of information from the web in text files quickly becomes cluttered and difficult to navigate and query. With quoteDB all that is needed is to remember 1 or 2 words to recall your desired quote at the speed of light.
 
-### Contributing To Laravel
+##quoteDB wikiquote scraper
 
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
+When it comes to retrieving and storing large amounts of quotes, copying and pasting the quotes into the create quote form one at a time can be time consuming. To solve this problem, quoteDB allows users to scrape the quotes from a given wikiquote url and import them to your database in bulk.
 
-### License
+##tech summary
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+* PHP 5.4
+* Laravel 4.2
+* [Datatables jQuery plugin](https://www.datatables.net/)
+* Vagrantfile configured for Ubuntu 14.04 VM
+* Bootswatch [Readble](https://bootswatch.com/readable/) theme during the daytime and [Darkly](https://bootswatch.com/darkly/) theme during the night
+* [Goutte PHP Web Scraper](https://github.com/FriendsOfPHP/Goutte)
+
+
+
+*note that when cloning this repo, you will need to create your own database.php file in app/config. 
